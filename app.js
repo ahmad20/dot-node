@@ -150,3 +150,4 @@ app.listen(port, () => {
 module.export = app;
 
 // https://documenter.getpostman.com/view/10747973/2s93eX2ZPF
+// https://discord.com/invite/RqjqdEvmv2

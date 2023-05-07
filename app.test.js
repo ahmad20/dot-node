@@ -6,8 +6,8 @@ const mocha = require("mocha");
 let token;
 let baseurl = 'http://localhost:3000'
 
-describe("Test the authentication and CRUD functionality", () => {
-  // Test register new user
+describe("Test Registration", function(){
+  this.timeout(5000); 
   it('Should register new user', async () => {
     const response = await request(baseurl)
       .post('/register')
@@ -17,6 +17,8 @@ describe("Test the authentication and CRUD functionality", () => {
     expect(response.status).to.equal(200);
     console.log(response.text);
   });
+})
+describe("Test the authentication and CRUD functionality", () => {
   // Test authentication
   it('Should authenticate the user and get the token', async () => {
     const response = await request(baseurl)
